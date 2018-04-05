@@ -32,11 +32,11 @@ class Server():
 
     def encrypt(self, message):
         '''Encrypt data using other part's RSA public key'''
-        message = message.encode('utf8')
+        message = message
         crypto = rsa.encrypt(message, self.other)
         return crypto
 
     def decrypt(self, crypto):
         '''Decrypt data using our RSA private key'''
         message = rsa.decrypt(crypto, self.privkey)
-        return message.decode()
+        return message

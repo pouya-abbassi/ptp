@@ -39,4 +39,4 @@ class Client():
     def decrypt(self, crypto):
         '''Decrypt data using our RSA private key'''
         message = rsa.decrypt(crypto, self.privkey)
-        return message.decode()
+        return message
